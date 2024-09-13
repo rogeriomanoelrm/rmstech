@@ -1,0 +1,428 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+
+    background-color: whitesmoke;
+}
+
+.sobre {
+    display: flex;
+}
+
+
+label{
+    font-size: 25px;
+}
+
+.texto{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.produtos img{
+    width: 300px;
+    height: 300px;
+    margin-left: 15%;
+    margin-top: 15px;
+}
+.produtos{
+margin-top: 30%;
+}
+
+
+
+.comprar{
+
+    position: fixed;
+    bottom: 20px; /* Distância da parte inferior da tela */
+    right: 20px;  /* Distância do lado direito da tela */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block;
+    text-align: center;
+    margin-top: 20%;
+
+}
+
+.comprar:hover {
+    background-color: #45a049;
+}
+
+
+.localizacao {
+    display: flex;
+    align-items: center; /* Corrigido: "align-itens" para "align-items" */
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    width: 40%;
+    height: 40%;
+    margin: auto; /* Centraliza o item dentro de seu contêiner */
+}
+
+
+
+
+
+.carousel-inner img {
+  display: flex;
+  flex-wrap:wrap;
+    width: 100vm;
+    height: auto;
+    max-height: 500px;
+    border-radius: 10px;
+    margin:;
+  
+  
+}
+  .localizacao {
+    display: flex;
+    align-items: center; /* Corrigido: "align-itens" para "align-items" */
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    width: 40%;
+    height: 20%;
+    margin: 30%; /* Centraliza o item dentro de seu contêiner */
+}
+
+
+  input.error {
+            border: 2px solid red;
+        }
+
+
+
+main.tela {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+    font-family: 'Arial', sans-serif; /* Adiciona uma fonte padrão */
+}
+
+.rmslogo {
+    width: 200px;
+    height: 100px;
+}
+
+
+.teste{
+    display: flex;
+
+}
+
+#ham {
+    position: fixed; /* Fixa o cabeçalho na página */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    left: 0;
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da página */
+    background-color: #fff; /* Cor de fundo do cabeçalho */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destacar o cabeçalho */
+}
+
+
+header {
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    font-size: 2rem;
+    color:rgb(86, 193, 243);
+}
+
+lu a {
+    color:rgb(86, 193, 243);
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 500px;
+    background-image: linear-gradient(to right, black, gray);
+    color: aliceblue;
+    margin-top: 30%;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    border: solid 2px aliceblue;
+    
+}
+
+.main input {
+    width: 130px;
+    background-color: black;
+    color: #29ABE2;
+    font-size: 2rem;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.buttons input {
+    width: 120px;
+}
+
+.menu-principal { 
+  
+    position: fixed;
+    left: 0;
+    top: 5vh;
+    width: auto;
+    height: 85vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-principal li {
+    list-style: none;
+    color: rgb(12, 1, 1);
+    font-size: 1.5em;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+#bt-fechar {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+#bt-hamburguer {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+select {
+    width: 130px;
+    background-color: black;
+    color: #29ABE2;
+    font-size: 2rem;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+
+.mcalogo{
+    width: 50px;
+    height: 50px;
+}
+
+
+.whats{
+    width: 20px;
+    height: 20px;
+}
+
+
+.carro {
+    width: 100%; /* makes the image width responsive */
+    height: auto; /* maintains the aspect ratio */
+  }
+
+  .contato{
+    display: flex;
+    background-color: black;
+    border-radius: 2%;
+    align-items: center;
+    width: 200px;
+  }
+  
+
+  #chatBox {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+#chatBody {
+    flex: 1;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+}
+#chatInput {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+@media (min-width: 768px) {
+    #bt-fechar, #bt-hamburguer {
+        display: none;
+       
+
+    }
+
+    .menu-principal {
+         display: none;
+        flex-wrap:wrap;
+     
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 85vw;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color:aqua;
+        border-radius: 5px;
+      
+  }
+
+.main {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 500px;
+    background-image: linear-gradient(to right, black, gray);
+    color: aliceblue;
+    margin-top: 15%;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    border: solid 2px aliceblue;
+    
+  
+  }
+  
+  
+    .localizacao {
+    display: none;
+    align-items: center; /* Corrigido: "align-itens" para "align-items" */
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    width: 40%;
+    height: 20%;
+    margin: 30%; /* Centraliza o item dentro de seu contêiner */
+}
+  
+  
+    .carro {
+        height: auto; /* Adjust height on smaller screens if necessary */
+      }
+    
+    
+}
+
+   header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-principal {
+          display: none;
+        flex-wrap:wrap;
+      
+    }
+
+    .menu-principal li {
+        margin: 10px;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main img {
+        max-width: 100%;
+    }
+
+    .carousel-inner img {
+        max-height: 300px;
+    }
+
+
+@media (max-width: 480px) {
+    main h2 {
+        font-size: 1.2em;
+    }
+
+    .menu-principal li {
+        margin: 5px ;
+    }
+
+    header img {
+        max-width: 120px;
+    }
+
+      .carousel-inner img {
+        display: flex;
+        flex-wrap:wrap;
+        max-height: 300px;
+        BORDER-RADIUS: 10PX;
+        margin-right:50%;
+        
+        
+    }
+    
+
+  
+
+
+
+}
+
+

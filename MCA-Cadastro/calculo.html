@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Preços Condicional</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            background-color: #fff;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<h2 class="title">Tabela de Preços com Condições</h2>
+
+<table>
+    <tr>
+        <th>Item</th>
+        <th>Valor (R$)</th>
+    </tr>
+    <tr>
+        <td>Tela</td>
+        <td><input type="number" id="tela" placeholder="Digite o valor" step="0.01" oninput="recalcularValores()"></td>
+    </tr>
+    <tr>
+        <td>Mão de Obra</td>
+        <td><input type="number" step="0.01" value="80.00" id="maoObra" oninput="recalcularValores()"></td>
+    </tr>
+    <tr>
+        <td>Frete</td>
+        <td><input type="number" step="0.01" value="10.00" id="frete" oninput="recalcularValores()"></td>
+    </tr>
+    <tr>
+        <td><strong>Total à Vista</strong></td>
+        <td><strong id="totalAvista">0,00</strong></td>
+    </tr>
+    <tr>
+        <td>Crédito à Vista</td>
+        <td id="creditoAvista">0,00</td>
+    </tr>
+    <tr>
+        <td>2 Vezes</td>
+        <td id="duasVezes">0,00</td>
+    </tr>
+    <tr>
+        <td>3 Vezes</td>
+        <td id="tresVezes">0,00</td>
+    </tr>
+    <tr>
+        <td>4 Vezes</td>
+        <td id="quatroVezes">0,00</td>
+    </tr>
+    <tr>
+        <td>5 Vezes</td>
+        <td id="cincoVezes">0,00</td>
+    </tr>
+</table>
+
+<script>
+    function recalcularValores() {
+        let tela = parseFloat(document.getElementById('tela').value) || 0;
+        let maoDeObra = parseFloat(document.getElementById('maoObra').value) || 0;
+        let frete = parseFloat(document.getElementById('frete').value) || 0;
+
+        let totalAvista;
+
+        // Aplicando as condições da fórmula Excel
+        if (tela === 50) {
+            totalAvista = tela * 2.4 + maoDeObra + frete;
+        } else if (tela === 60) {
+            totalAvista = tela * 2.4 + maoDeObra + frete;
+        } else if (tela === 70) {
+            totalAvista = tela * 2.15 + maoDeObra + frete;
+        } else if (tela === 80) {
+            totalAvista = tela * 2 + maoDeObra + frete;
+        } else if (tela >= 90) {
+            totalAvista = tela * 1.925 + maoDeObra + frete;
+        } else {
+            totalAvista = 0;  // Condição padrão caso nenhuma das condições anteriores seja atendida
+        }
+
+        document.getElementById('totalAvista').innerHTML = totalAvista.toFixed(2);
+
+        // Cálculo do crédito à vista
+        let creditoAvista = totalAvista + 5.31; // Crédito à vista fixo
+        document.getElementById('creditoAvista').innerHTML = creditoAvista.toFixed(2);
+
+        // Cálculo das parcelas com taxas fixas
+        let duasVezes = creditoAvista + 4.59;
+        document.getElementById('duasVezes').innerHTML = duasVezes.toFixed(2);
+
+        let tresVezes = creditoAvista + 5.97;
+        document.getElementById('tresVezes').innerHTML = tresVezes.toFixed(2);
+
+        let quatroVezes = creditoAvista + 7.33;
+        document.getElementById('quatroVezes').innerHTML = quatroVezes.toFixed(2);
+
+        let cincoVezes = creditoAvista + 8.66;
+        document.getElementById('cincoVezes').innerHTML = cincoVezes.toFixed(2);
+    }
+
+    // Recalcula ao carregar a página
+    window.onload = recalcularValores;
+</script>
+
+</body>
+</html>
