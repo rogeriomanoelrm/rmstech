@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa de Contabilidade</title>
+  <link rel="stylesheet" href="rms.css">
+</head>
+<body>
+  <h1>Sistema de Contabilidade</h1>
+
+  <!-- Formulário para inserir transações -->
+  <form id="transacao-form">
+    <input type="date" id="data" placeholder="Data">
+    <input type="text" id="descricao" placeholder="Descrição">
+    <input type="number" id="valor" placeholder="Valor">
+    <select id="tipo">
+      <option value="receita">Receita</option>
+      <option value="despesa">Despesa</option>
+    </select>
+    <button type="submit">Adicionar Transação</button>
+  </form>
+
+  <div>
+    <label for="filtro-tipo">Filtrar por:</label>
+    <select id="filtro-tipo">
+      <option value="todas">Todas</option>
+      <option value="receita">Receitas</option>
+      <option value="despesa">Despesas</option>
+    </select>
+  </div>
+
+  <!-- Tabela para exibir transações -->
+  <table id="transacoes-tabela">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody id="transacoes-lista">
+      <!-- Linhas das transações aparecerão aqui -->
+    </tbody>
+  </table>
+
+  <!-- Exibir saldo final -->
+  <div id="saldo">
+    <h2>Saldo: <span id="saldo-final">R$ 0,00</span></h2>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
